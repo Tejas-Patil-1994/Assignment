@@ -1,0 +1,89 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+            integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+        <style>
+            .flex-conatiner {
+                display: flex;
+            }
+
+            .header {
+                background-color: cadetblue;
+                display: inline-flex;
+                height: 30px;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .margin-left {
+                margin-left: 10px;
+            }
+
+            .margin-right {
+                margin-right: 10px;
+            }
+
+            .image {
+                display: flex;
+                width: 100%;
+                height: 90%;
+                justify-content: center;
+                position: relative;
+            }
+
+            .footer {
+                background-color: cadetblue;
+                display: flex;
+                height: 30px;
+                width: 100%;
+                justify-content: flex-end;
+            }
+
+            .rectagle {
+                top: 45%;
+                width: 50px;
+                height: 50px;
+                left: 50%;
+                border: 2px solid yellow;
+                position: absolute;
+            }
+        </style>
+        <div class="flex-container">
+            <div class="header">
+                <span class="margin-left"><i class="fa fa-address-book"></i></span>
+                <span>Assignment 3</span>
+                <span class="margin-right"><i class=" fa fa-address-book"></i></span>
+            </div>
+            <div class="middle">
+                <div class="image">
+                    <img class="img1" src="./image.jpg">
+                    <div class="rectagle">
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <span id="date" class="margin-right"></span>
+            </div>
+        </div>
+        <script>
+            document.getElementById('date').innerHTML = new Date().toString('MM/dd/yyyy');
+        </script>
+    </body>
+
+</html>

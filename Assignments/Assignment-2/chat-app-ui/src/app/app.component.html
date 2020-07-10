@@ -1,0 +1,22 @@
+<div class="flex-container">
+  <div style="width: 35%;max-height: 80vh;overflow:auto;border: 1px solid #ccc;
+border-radius: 5px;">
+    <div class="chat-header">
+      <span>Chat App</span>
+    </div>
+    <div class="message-item" *ngFor="let message of chatMesageList let i = index">
+      <div class="message" [ngClass]="{ right: !message.isReceiver}">
+        <div class="otherBubble other">
+          {{message.chatMessage}}
+        </div>
+      </div>
+      <div [ngClass]="{ right: !message.isReceiver}"><span
+          class="date-item">{{message.receivedTime | date:'shortTime'}}</span>
+      </div>
+    </div>
+    <div class="message-input">
+      <input [(ngModel)]="chatText" class="custom-input" type="text" (keyup)="$event.keyCode==13 && sendMessage()" />
+      <button class="button" (click)="sendMessage()" [disabled]="chatText.length == 0">Send Message</button>
+    </div>
+  </div>
+</div>
